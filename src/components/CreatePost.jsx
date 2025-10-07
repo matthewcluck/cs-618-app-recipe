@@ -20,7 +20,7 @@ export function CreatePost() {
     createPostMutation.mutate()
   }
 
-  if (!token) return <div>Please log in to create new posts.</div>
+  if (!token) return <div>Please log in to share a recipe and vote.</div>
 
   return (
     <form onSubmit={handleSubmit}>
@@ -49,7 +49,7 @@ export function CreatePost() {
       {createPostMutation.isSuccess ? (
         <>
           <br />
-          Post created successfully!
+          Recipe shared successfully!
         </>
       ) : null}
     </form>
